@@ -10,8 +10,8 @@ int main() {
     Game game;
     initializeGame(game);
 
-    cout << "========== КРЕСТИКИ-НОЛИКИ ==========" << endl;
-    cout << "Для выхода в любой момент введите 'q'" << endl;
+    cout << "========== CRESTIKI-NOLIKI ==========" << endl;
+    cout << "Dlya vihoda v lyboy moment nazhmite 'q'" << endl;
     cout << "======================================" << endl;
 
     while (!game.gameOver) {
@@ -32,6 +32,6 @@ int main() {
         }
     }
 
-    cout << "Спасибо за игру! До свидания!" << endl;
+    cout << "Spasibo za igru do svidanya!" << endl;
     return 0;
 }

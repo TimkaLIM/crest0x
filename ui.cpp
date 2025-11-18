@@ -28,7 +28,7 @@ void printBoard(const Game& game) {
         cout << endl;
         cout << "---+---+---+---+" << endl;
     }
-    cout << "Текущий игрок: " << game.currentPlayer << endl;
+    cout << "Tekushiy igrok: " << game.currentPlayer << endl;
 }
 
 bool makeMove(Game& game) {
@@ -36,14 +36,14 @@ bool makeMove(Game& game) {
     bool validMove = false;
 
     while (!validMove) {
-        cout << "Игрок " << game.currentPlayer << ", введите строку и столбец (0-2) или 'q' для выхода: ";
+        cout << "Igrok " << game.currentPlayer << ", Vvedite stroku i stolbec (0-2) cherez probel ili 'q' dlya vihoda: ";
 
         string input;
         getline(cin, input);
 
         // Проверка на команду выхода
         if (input == "q" || input == "Q" || input == "quit" || input == "exit") {
-            cout << "Выход из игры..." << endl;
+            cout << "Vihod iz igri..." << endl;
             return false; // Сигнализируем о выходе
         }
 
@@ -55,7 +55,7 @@ bool makeMove(Game& game) {
             // Проверяем, что после чисел нет лишних символов
             string remaining;
             if (ss >> remaining) {
-                cout << "Ошибка: введены лишние символы. Введите два числа от 0 до 2." << endl;
+                cout << "Oshibka: Vvedeni lishniy simboly, vvedite simboly ot 0 do 2" << endl;
                 continue;
             }
 
@@ -65,11 +65,11 @@ bool makeMove(Game& game) {
                 validMove = true;
             }
             else {
-                cout << "Неверный ход! Клетка занята или координаты вне диапазона 0-2." << endl;
+                cout << "Neverniy hod! Kletka zanyta ili vne diapozona 0-2." << endl;
             }
         }
         else {
-            cout << "Ошибка: введите два числа от 0 до 2 или 'q' для выхода." << endl;
+            cout << "Oshibka: Vvedite dva chisla ot 0 do 2 ili 'q' dlya vihoda." << endl;
         }
     }
     return true; // Ход успешно сделан
@@ -82,10 +82,10 @@ void printResult(const Game& game) {
     bool draw = checkDraw(game);
 
     if (win) {
-        cout << "\n Поздравляем! Игрок " << game.currentPlayer << " победил!" << endl;
+        cout << "\n Pozdravlyaem! Igrok " << game.currentPlayer << " Pobedil!" << endl;
     }
     else if (draw) {
-        cout << "\n Ничья! Игра окончена." << endl;
+        cout << "\n Nichya! Game is over." << endl;
     }
 }
 
